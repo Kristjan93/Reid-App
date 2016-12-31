@@ -1,0 +1,49 @@
+/*----------------------------------< Global >----------------------------------*/
+/*
+ * box-sizing:
+ *  - The width and height properties (and min/max properties)
+ *    includes: content, padding and border, but not the margin.
+ * min-height 0 & min-width:
+ *  - Fix for the carusel using flexbox.
+ */ 
+* {
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+  font-family: Roboto, sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, 
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+/*----------------------------------</Global >----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
