@@ -4,7 +4,7 @@ import Radium from 'radium'
 
 import Divider from 'material-ui/Divider';
 import CompanyLogoImage from '../components/CompanyLogoImage.jsx';
-import DefinitionList from '../components/DefinitionList.jsx'
+import FooterDefinitionList from '../components/FooterDefinitionList.jsx'
 
 import { DD_LINKS_TYPE } from '../constants/enums.js'
 
@@ -27,12 +27,12 @@ const styles = {
   }
 };
 
-const definitionList = [
+const definitionLists = [
   {
     title: (<a href='/'><CompanyLogoImage style={styles.base.companyLogoImage} /></a>),
     definitionDescriptions: [
       {
-        type: DD_LINKS_TYPE.TEXT,
+        type: DD_LINKS_TYPE.BRAND,
         text: 'General information concerning what the company is all about.',
       }
     ],
@@ -65,18 +65,20 @@ const definitionList = [
 ];
 
 class Footer extends React.Component {
+
+  renderDefinitionList({title, definitionDescriptions}, index) {
+    return (
+      <FooterDefinitionList
+        key={index}
+        title={title}
+        definitionDescriptions={definitionDescriptions} />
+    );
+  }
+
   render() {
-    const dlItems = definitionList.map((item, index) => {
-      return (
-        <DefinitionList
-          key={index}
-          title={item.title}
-          definitionDescriptions={item.definitionDescriptions} />
-      );
-    });
     return (
       <footer style={styles.base.footer}>
-        {dlItems}
+        {definitionLists.map(this.renderDefinitionList)}
       </footer>
     );
   }

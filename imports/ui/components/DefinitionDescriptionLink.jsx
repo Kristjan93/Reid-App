@@ -13,18 +13,9 @@ const styles = {
       padding: 0,
       border: 0
     },
-
-    a: {
-      // cursor: 'pointer',
-      textDecoration: 'none',
-      color: 'inherit',
+    FlatButton: {
+      userSelect: 'auto',
     },
-
-    fontIcon: {
-      fontSize: '0.9rem',
-      paddingRight: '5px',
-      color: 'blue',
-    }
   },
 };
 
@@ -50,11 +41,15 @@ class DefinitionDescriptionLink extends React.Component {
     }
 
     return (
-      <FlatButton
-        
-        target="_blank"
-        label={this.props.text}
-        icon={<FontIcon className={linkIconClass} />} />
+      <dd style={styles.base.dd} >
+        <FlatButton
+          style={styles.base.FlatButton}
+          href={this.props.href}
+          target="_blank"
+          label={this.props.text}
+          labelStyle={this.props.textStyle}
+          icon={<FontIcon className={linkIconClass} />} />
+      </dd>
     );
   }
 }
