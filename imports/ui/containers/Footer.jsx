@@ -65,7 +65,6 @@ const definitionLists = [
 ];
 
 class Footer extends React.Component {
-
   renderDefinitionList({title, definitionDescriptions}, index) {
     return (
       <FooterDefinitionList
