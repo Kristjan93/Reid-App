@@ -15,6 +15,14 @@ const styles = {
     },
     FlatButton: {
       userSelect: 'auto',
+      labelStyle: {
+        textTransform: 'none',
+        color: '#8d9aa5',
+      },
+      FontIcon: {
+        marginLeft: 0,
+        color: '#8d9aa5',
+      },
     },
   },
 };
@@ -47,8 +55,8 @@ class DefinitionDescriptionLink extends React.Component {
           href={this.props.href}
           target="_blank"
           label={this.props.text}
-          labelStyle={this.props.textStyle}
-          icon={<FontIcon className={linkIconClass} />} />
+          labelStyle={styles.base.FlatButton.labelStyle}
+          icon={<FontIcon style={styles.base.FlatButton.FontIcon} className={linkIconClass} />} />
       </dd>
     );
   }

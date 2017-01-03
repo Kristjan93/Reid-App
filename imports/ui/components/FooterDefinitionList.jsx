@@ -9,29 +9,15 @@ import { DD_LINKS_TYPE } from '../constants/enums.js'
 const styles = {
   base: {
     dl: {
-      width: '20%',
+      width: '220px',
     },
 
     dt: {
+      color: '#8d9aa5',
       fontSize: '1.2rem',
       fontWeight: 500,
       lineHeight: '38px',
     },
-
-    dd: {
-      margin: 0,
-      padding: 0,
-      border: 0,
-      fontSize: '0.9rem',
-      link: {
-        lineHeight: '35px',
-      },
-    },
-  },
-  DefinitionDescriptionLink: {
-    textStyle: {
-      textTransform: 'none',
-    }
   },
 };
 
@@ -47,7 +33,6 @@ class FooterDefinitionList extends React.Component {
           key={index}
           type={item.type}
           text={item.text}
-          textStyle={styles.DefinitionDescriptionLink.textStyle}
           href={item.href} />
       );
     }

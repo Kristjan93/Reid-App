@@ -5,25 +5,26 @@ import Radium from 'radium'
 import Divider from 'material-ui/Divider';
 import CompanyLogoImage from '../components/CompanyLogoImage.jsx';
 import FooterDefinitionList from '../components/FooterDefinitionList.jsx'
+import Container from '../components/Container.jsx';
 
 import { DD_LINKS_TYPE } from '../constants/enums.js'
 
 const styles = {
   base: {
     footer: {
-      display: 'flex',
-      flexFlow: 'row wrap',
-      justifyContent: 'space-between',
+      //display: 'flex',
+      background: '#edeff0',
+      color: '#8d9aa5',
       minHeight: '50px',
-      paddingLeft: '24px',
-      paddingRight: '24px',
-      backgroundColor: '#42A5F5',
-      color: 'white',
     },
-
     companyLogoImage: {
       width: '105px',
     },
+    Container: {
+      display: 'flex',
+      flexFlow: 'row wrap',
+      justifyContent: 'space-between',
+    }
   }
 };
 
@@ -77,7 +78,10 @@ class Footer extends React.Component {
   render() {
     return (
       <footer style={styles.base.footer}>
-        {definitionLists.map(this.renderDefinitionList)}
+        <Container style={styles.base.Container} >
+            <Divider style={ {width: '100%'} } />
+            {definitionLists.map(this.renderDefinitionList)}
+        </Container>
       </footer>
     );
   }

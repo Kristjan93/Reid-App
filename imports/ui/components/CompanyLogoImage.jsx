@@ -6,9 +6,10 @@ import { COMPANY_LOGO } from '../constants/srcPictures.js'
 const styles = {
   base: {
     width: '50px',
+    opacity: '0.6',
     transition: 'opacity 300ms',
     ':hover': {
-      opacity: '0.6',
+      opacity: '1',
     },
   },
 };

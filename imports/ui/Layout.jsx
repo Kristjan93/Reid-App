@@ -4,8 +4,9 @@ import componentQueries from 'react-component-queries';
 
 import { setBreakpoints } from './constants/breakpoints.js'
 
-import Header from './containers/Header.jsx'
-import Footer from './containers/Footer.jsx'
+import Header from './containers/Header.jsx';
+import Main from './containers/Main.jsx';
+import Footer from './containers/Footer.jsx';
 
 import FlatButton from 'material-ui/FlatButton';
 
@@ -18,6 +19,7 @@ const styles = {
 
   main: {
     flex: '1',
+    //minHeight: '400px',
   },
 
   footer: {
@@ -38,11 +40,10 @@ class Layout extends React.Component {
         <Header>
         </Header>
 
-        <main style={styles.main}>
-          {this.props.breakpoint}
-          {this.props.children}
-          <FlatButton label="hahah" />
-        </main>
+        <Main 
+          style={styles.main}
+          breakpoint={this.props.breakpoint} >
+        </Main>
 
         <Footer style={styles.footer}>
         </Footer>
