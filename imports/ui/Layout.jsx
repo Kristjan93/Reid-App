@@ -7,6 +7,7 @@ import { setBreakpoints } from './constants/breakpoints.js'
 import Header from './containers/Header.jsx';
 import Main from './containers/Main.jsx';
 import Footer from './containers/Footer.jsx';
+import Home from './pages/Home.jsx';
 
 import FlatButton from 'material-ui/FlatButton';
 
@@ -40,7 +41,8 @@ class Layout extends React.Component {
         <Header>
         </Header>
 
-        <Main 
+        <Main
+          children={this.props.children}
           style={styles.main}
           breakpoint={this.props.breakpoint} >
         </Main>

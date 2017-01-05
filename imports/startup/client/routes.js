@@ -1,14 +1,15 @@
-import Task from '../../ui/components/Task.jsx';
+import Home from '../../ui/pages/Home.jsx';
 
 const routes = [
   {
     path: '/',
-    component: Task
+    component: Home
   },
   // {
   //   path: '/about',
   //   component: About
-  // }, {
+  // },
+  // {
   //   path: '*',
   //   component: NotFound
   // }
