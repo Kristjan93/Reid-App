@@ -1,5 +1,17 @@
 import React from 'react';
+
 import AppBar from 'material-ui/AppBar';
+import FontIcon from 'material-ui/FontIcon';
+import { Link } from 'react-router';
+
+const styles = {
+  base: {
+    dropDownMenuIco: {
+      color: 'inherit',
+      marginLeft: '10px',
+    },
+  },
+};
 
 export default class Header extends React.Component {
 
@@ -12,26 +24,27 @@ export default class Header extends React.Component {
           <nav role="navigation">
             <ul>
               <li>
-                <a href="/">
+                <Link to="/">
                   <div>
                     Home
                   <span>there's no place like it</span>
                   </div>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/blog">
+                <a href="#">
                   <div>
-                    Blog
-                  <span>my thoughts rock</span>
+                    Tours
+                    <FontIcon 
+                      style={styles.base.dropDownMenuIco} 
+                      className="fa fa-caret-down" />
+                  <span>come ride with us</span>
                   </div>
-                </a><div>
+                </a>
+                <div>
                   <ul>
-                    <li><a href="#">Me</a></li>
-                    <li><a href="#">Gaming</a></li>
-                    <li><a href="#">Sport</a></li>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Web Development</a></li>
+                    <li><Link to="short-tours">Short tours</Link></li>
+                    <li><Link to="long-tours">Long tours</Link></li>
                   </ul>
                 </div>
               </li>

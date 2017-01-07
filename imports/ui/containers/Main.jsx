@@ -20,11 +20,10 @@ const styles = {
 
 class Main extends React.Component {
   render() {
+    console.log(this.props.children)
     return (
       <main style={styles.base.main} >
-        <Paper zDepth={2}>
           {this.props.children}
-        </Paper>
       </main>
     );
   }
