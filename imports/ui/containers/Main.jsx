@@ -28,5 +28,5 @@ class Main extends React.Component {
     );
   }
 }
-
+//bla
 export default Radium(Main);
