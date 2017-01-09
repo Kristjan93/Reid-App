@@ -29,8 +29,4 @@ class Main extends React.Component {
   }
 }
 
-// <Paper style={styles.base.Paper} zDepth={1}>
-//   {this.props.children}
-// </Paper>
-
 export default Radium(Main);
