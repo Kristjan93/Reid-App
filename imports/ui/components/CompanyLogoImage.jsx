@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium'
 
-import { COMPANY_LOGO } from '../constants/srcPictures.js'
+import { COMPANY_LOGO } from '../constants/srcPictures.js';
 
 const styles = {
   base: {

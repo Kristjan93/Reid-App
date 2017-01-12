@@ -5,6 +5,8 @@ import 'react-image-gallery/styles/css/image-gallery';
 import ImageGallery from 'react-image-gallery';
 import Paper from 'material-ui/Paper';
 
+import { HOME_ONE, HOME_TWO } from '../constants/srcPictures.js';
+
 const styles = {
   base: {
     color: '#333',
@@ -20,11 +22,11 @@ class Home extends React.Component {
   render() {
     const images = [
       {
-        original: '/images/homePic1.jpg',
+        original: HOME_ONE,
         description: 'See the incredible landscape in our area',
       },
       {
-        original: '/images/homePic2jpg.jpg',
+        original: HOME_TWO,
       }
     ];
     return (
