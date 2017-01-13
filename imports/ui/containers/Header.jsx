@@ -1,11 +1,20 @@
 import React from 'react';
+import Radium from 'radium'
 
 import AppBar from 'material-ui/AppBar';
-import FontIcon from 'material-ui/FontIcon';
 import { Link } from 'react-router';
+import HeaderNavList from '../components/HeaderNavList.jsx';
+import Container from '../components/Container.jsx';
 
 const styles = {
   base: {
+    AppBar: {
+      padding: 0,
+    },
+    Container: {
+      width: '100%',
+      padding: 0,
+    },
     dropDownMenuIco: {
       color: 'inherit',
       marginLeft: '10px',
@@ -13,61 +22,27 @@ const styles = {
   },
 };
 
-export default class Header extends React.Component {
+class Header extends React.Component {
 
   render() {
     return (
       <header>
         <AppBar
-          title="Geysir Hestar"
+          title={null}
+          titleStyle={ {display: 'none'} }
+          style={styles.base.AppBar}
+          iconElementLeft={null}
+          iconElementRight={null}
           showMenuIconButton={false} >
-          <nav role="navigation">
-            <ul>
-              <li>
-                <Link to="/">
-                  <div>
-                    Home
-                  <span>there's no place like it</span>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <a href="#">
-                  <div>
-                    Tours
-                    <FontIcon 
-                      style={styles.base.dropDownMenuIco} 
-                      className="fa fa-caret-down" />
-                  <span>come ride with us</span>
-                  </div>
-                </a>
-                <div>
-                  <ul>
-                    <li><Link to="short-tours">Short tours</Link></li>
-                    <li><Link to="long-tours">Long tours</Link></li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="/contact">
-                  <div>
-                    Contact
-                  <span>drop me a line</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="/forum">
-                  <div>
-                    Forum
-                  <span>chat with others</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </nav>
+
+          <Container style={styles.base.Container}>
+            <HeaderNavList />
+          </Container>
+
         </AppBar>
       </header>
     );
   }
 }
+
+export default Radium(Header);

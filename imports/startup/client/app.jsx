@@ -20,7 +20,7 @@ const rootRoute = {
 
 const muiTheme = getMuiTheme({
   palette: {
-    primary1Color: 	'#a53438',
+    primary1Color: 	'#B71C1C',
     // primary2Color: cyan700,
     // primary3Color: grey400,
     // accent1Color: pinkA200,
