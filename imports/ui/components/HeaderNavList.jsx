@@ -28,7 +28,7 @@ const headerNavItems = [
     title: "Home",
   },
   {
-    to: "#",
+    to: "",
     title: "Tours",
     dropdown: [
       { to: 'short-tours', text: 'Short tours' },

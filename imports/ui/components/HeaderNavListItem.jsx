@@ -15,7 +15,7 @@ const styles = {
       position: 'relative',
       transition: 'all linear 0.1s',
       ':hover': {
-        background: '#8b74aa',
+        background: '#9E9E9E',
       },
     },
     RadiumLink: {
@@ -33,7 +33,7 @@ const styles = {
     },
     dropdownDiv: {
       display: 'none',
-      background: 'linear-gradient(to bottom, rgba(58, 162, 173, 1) 0, rgba(62, 188, 207, 0.96) 100%)',
+      background: '#BDBDBD',
       borderRadius: '0 0 2px 2px',
       boxShadow: '0 3px 1px rgba(0, 0, 0, .05)',
       fontSize: '1rem',
