@@ -3,6 +3,7 @@ import Radium from 'radium'
 
 import FontIcon from 'material-ui/FontIcon';
 import { Link } from 'react-router';
+let RadiumLink = Radium(Link);
 
 
 const styles = {
@@ -17,7 +18,7 @@ const styles = {
         background: '#8b74aa',
       },
     },
-    Link: {
+    RadiumLink: {
       alignItems: 'flex-start',
       color: '#fff',
       display: 'flex',
@@ -30,14 +31,35 @@ const styles = {
       textShadow: '0 1px 1px rgba(0,0,0,.1)',
       transition: 'all linear 0.1s',
     },
-    div: {
-      // background: 'linear-gradient(to bottom, rgba(58, 162, 173, 1) 0, rgba(62, 188, 207, 0.96) 100%)',
-      // borderRadius: '0 0 2px 2px',
-      // boxShadow: '0 3px 1px rgba(0, 0, 0, .05)',
-      // display: 'none',
-      // fontSize: '1rem',
-      // position: 'absolute',
-      // width: '195px',
+    dropdownDiv: {
+      display: 'none',
+      background: 'linear-gradient(to bottom, rgba(58, 162, 173, 1) 0, rgba(62, 188, 207, 0.96) 100%)',
+      borderRadius: '0 0 2px 2px',
+      boxShadow: '0 3px 1px rgba(0, 0, 0, .05)',
+      fontSize: '1rem',
+      position: 'absolute',
+      width: '195px',
+    },
+    dropdownUl: {
+      padding: 0,
+      listStyleType: 'none',
+    },
+    dropdownLi: {
+      margin: 0,
+      padding: 0,
+      lineHeight: '30px',
+      ':hover': {
+        backgroundColor: 'rgba(0,0,0,.15)',
+      },
+    },
+    dropdownRadiumLink: {
+      color: 'rgba(255, 255, 255, .9)',
+      display: 'block',
+      fontSize: ' .75rem',
+      letterSpacing: ' 1.5px',
+      padding: ' .25rem 1.5rem',
+      textDecoration: 'none',
+      textTransform: 'uppercase',
     },
     FontIcon: {
       color: 'inherit',
@@ -49,16 +71,18 @@ const styles = {
 class HeaderNavListItem extends React.Component {
   renderDropdownItem(item, index) {
     return (
-      <li key={index}>
-        <Link to={item.to}>{item.text}</Link>
+      <li key={index} style={styles.base.dropdownLi}>
+        <RadiumLink to={item.to} style={styles.base.dropdownRadiumLink}>
+          {item.text}
+        </RadiumLink>
       </li>
     );
   }
 
   render() {
     return (
-      <li style={styles.base.li}>
-        <Link style={styles.base.Link} to={this.props.to}>
+      <li key="navLink" style={styles.base.li}>
+        <RadiumLink style={styles.base.RadiumLink} to={this.props.to}>
           <div style={styles.base.div}>
             {this.props.title}
 
@@ -68,14 +92,14 @@ class HeaderNavListItem extends React.Component {
                 className="fa fa-caret-down" />}
 
           </div>
-        </Link>
+        </RadiumLink>
 
-        {this.props.dropdown && 
-          <div>
-            <ul>
+        {this.props.dropdown &&
+          (<div style={[styles.base.dropdownDiv, Radium.getState(this.state, 'navLink', ':hover') && { display: 'block' }]}>
+            <ul style={styles.base.dropdownUl} >
               {this.props.dropdown.map((this.renderDropdownItem))}
             </ul>
-          </div>}
+          </div>)}
 
       </li>
     );

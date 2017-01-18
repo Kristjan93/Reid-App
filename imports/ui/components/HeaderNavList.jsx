@@ -19,16 +19,45 @@ const styles = {
   },
 };
 
+const headerNavItems = [
+  {
+    to: "/",
+    title: "Home",
+  },
+  {
+    to: "#",
+    title: "Tours",
+    dropdown: [
+      { to: 'short-tours', text: 'Short tours' },
+      { to: 'long-tours', text: 'Long tours' },
+    ],
+  },
+  {
+    to: "information",
+    title: "Information",
+  },
+  {
+    to: "contact",
+    title: "Contact",
+  },
+];
 
 class HeaderNavList extends React.Component {
+  renderHeaderNavListItem(item, index) {
+    return (
+      <HeaderNavListItem
+        key={index}
+        to={item.to}
+        title={item.title}
+        dropdown={item.dropdown} />
+    );
+  }
+
   render() {
     return (
-      <nav role="navigation">
+      <nav className="headerNavMenu" role="navigation">
         <ul style={styles.base.ul}>
-          <HeaderNavListItem  
-            to="/" 
-            title="Tours"
-            dropdown={ [{to: 'short-tours', text:'Short tours'},{to: 'long-tours', text:'Long tours'} ] } />
+        {headerNavItems.map(this.renderHeaderNavListItem)}
         </ul>
       </nav>
     );
