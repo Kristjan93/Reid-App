@@ -11,10 +11,13 @@ const styles = {
     ul: {
       display: 'flex',
       flexWrap: 'wrap',
-      justifyContent: 'flex-start',
+      justifyContent: 'flex-end',
       listStyle: 'none',
       margin: '0',
       padding: '0',
+    },
+    FontIcon: {
+      color: 'inherit'
     },
   },
 };
@@ -40,6 +43,10 @@ const headerNavItems = [
     to: "contact",
     title: "Contact",
   },
+  {
+    to: "#",
+    title: (<FontIcon style={styles.base.FontIcon} className="fa fa-facebook" />)
+  }
 ];
 
 class HeaderNavList extends React.Component {
