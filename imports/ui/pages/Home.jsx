@@ -30,7 +30,7 @@ class Home extends React.Component {
       }
     ];
     return (
-      <Paper zDepth={2}>
+      <Paper zDepth={1}>
         <ImageGallery
           ref={i => this._imageGallery = i}
           items={images}
