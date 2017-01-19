@@ -81,8 +81,8 @@ class HeaderNavListItem extends React.Component {
 
   render() {
     return (
-      <li key="navLink" style={styles.base.li}>
-        <RadiumLink style={styles.base.RadiumLink} to={this.props.to}>
+      <li key="navLink" style={[styles.base.li, this.props.rootStyle]}>
+        <RadiumLink style={[styles.base.RadiumLink, this.props.linkStyle]} to={this.props.to}>
           <div style={styles.base.div}>
             {this.props.title}
 

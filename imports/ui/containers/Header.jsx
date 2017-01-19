@@ -13,7 +13,7 @@ const styles = {
     },
     Container: {
       width: '100%',
-      padding: 0,
+      padding: '0 23px',
     },
     dropDownMenuIco: {
       color: 'inherit',

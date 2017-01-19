@@ -5,7 +5,6 @@ import FontIcon from 'material-ui/FontIcon';
 import { Link } from 'react-router';
 import HeaderNavListItem from './HeaderNavListItem.jsx';
 
-
 const styles = {
   base: {
     ul: {
@@ -16,6 +15,10 @@ const styles = {
       margin: '0',
       padding: '0',
     },
+    img: {
+      height: '58px',
+      width: 'auto',
+    },
     FontIcon: {
       color: 'inherit'
     },
@@ -23,6 +26,12 @@ const styles = {
 };
 
 const headerNavItems = [
+  {
+    to: "/",
+    rootStyle: { margin: '0 auto 0 0' },
+    linkStyle: { 'padding': '0rem', margin: '0 20px' },
+    title: (<img style={styles.base.img} src="/images/LogoMakr.png" />),
+  },
   {
     to: "/",
     title: "Home",
@@ -54,6 +63,8 @@ class HeaderNavList extends React.Component {
     return (
       <HeaderNavListItem
         key={index}
+        rootStyle={item.rootStyle}
+        linkStyle={item.linkStyle}
         to={item.to}
         title={item.title}
         dropdown={item.dropdown} />
@@ -72,39 +83,3 @@ class HeaderNavList extends React.Component {
 }
 
 export default Radium(HeaderNavList);
-
-
-// <li>
-//             <a href="#">
-//               <div>
-//                 Tours
-//                     <FontIcon
-//                   style={styles.base.dropDownMenuIco}
-//                   className="fa fa-caret-down" />
-//                 <span>come ride with us</span>
-//               </div>
-//             </a>
-//             <div>
-//               <ul>
-//                 <li><Link to="short-tours">Short tours</Link></li>
-//                 <li><Link to="long-tours">Long tours</Link></li>
-//               </ul>
-//             </div>
-//           </li>
-
-//           <li>
-//             <a href="/contact">
-//               <div>
-//                 Contact
-//                   <span>drop me a line</span>
-//               </div>
-//             </a>
-//           </li>
-//           <li>
-//             <a href="/forum">
-//               <div>
-//                 Forum
-//                   <span>chat with others</span>
-//               </div>
-//             </a>
-//           </li>
