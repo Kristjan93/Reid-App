@@ -5,7 +5,6 @@ import FontIcon from 'material-ui/FontIcon';
 import { Link } from 'react-router';
 let RadiumLink = Radium(Link);
 
-
 const styles = {
   base: {
     li: {
@@ -100,7 +99,6 @@ class HeaderNavListItem extends React.Component {
               {this.props.dropdown.map((this.renderDropdownItem))}
             </ul>
           </div>)}
-
       </li>
     );
   }

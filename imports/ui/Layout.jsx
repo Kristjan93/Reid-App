@@ -38,13 +38,14 @@ class Layout extends React.Component {
   render() {
     return (
       <div style={styles.site} >
-        <Header>
+        <Header
+          breakpoint={this.props.breakpoint}>
         </Header>
 
         <Main
           children={this.props.children}
           style={styles.main}
-          breakpoint={this.props.breakpoint} >
+          breakpoint={this.props.breakpoint}>
         </Main>
 
         <Footer style={styles.footer}>
