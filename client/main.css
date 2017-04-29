@@ -17,6 +17,12 @@
   box-sizing: inherit;
 }
 
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
 html, 
 body {
   padding: 0;
@@ -29,13 +35,8 @@ html {
 }
 
 img {
+	height: auto;
   max-width: 100%;
-}
-
-.container {
-  position: relative;
-  max-width: 1260px;
-  margin: 0 auto;
 }
 
 /*----------------------------------</Global >----------------------------------*/

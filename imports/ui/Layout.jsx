@@ -1,28 +1,21 @@
 import React from 'react';
 import Radium from 'radium'
-import componentQueries from 'react-component-queries';
 
-import { setBreakpoints } from './constants/breakpoints.js'
-
-import Header from './containers/Header.jsx';
-import Main from './containers/Main.jsx';
-import Footer from './containers/Footer.jsx';
-import Home from './pages/Home.jsx';
-
-import FlatButton from 'material-ui/FlatButton';
+import Header from './components/Layout/Header.jsx';
+import Main from './components/Layout/Main.jsx';
+import Footer from './components/Layout/Footer.jsx';
 
 const styles = {
-  site: {
-    minHeight: '100vh',
+  Layout: {
     display: 'flex',
+    minHeight: '100vh',
     flexDirection: 'column',
+    paddingTop: '64px',
   },
-
   main: {
+    display: 'flex',
     flex: '1',
-    //minHeight: '400px',
   },
-
   footer: {
     padding: '20px',
     background: '#42A5F5',
@@ -37,17 +30,14 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div style={styles.site} >
-        <Header
-          breakpoint={this.props.breakpoint}>
-        </Header>
+      <div style={ styles.Layout }>
+        <Header />
 
-        <Main
-          children={this.props.children}
-          style={styles.main}
-          breakpoint={this.props.breakpoint}>
-        </Main>
+        <main style={styles.main}>
+          {this.props.children}
+        </main>
 
+        
         <Footer style={styles.footer}>
         </Footer>
       </div>
@@ -55,10 +45,5 @@ class Layout extends React.Component {
   }
 }
 
-/* 
- * Based on the predefined breakpoints 'componentQueries'
- * enables the component 'Layout' to pass down breakpoints as props.
- */
-export default componentQueries(
-  ({ width }) => { return setBreakpoints(width) }
-)( Radium(Layout));
+
+export default Radium(Layout);

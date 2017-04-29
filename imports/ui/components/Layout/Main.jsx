@@ -1,9 +1,6 @@
 import React from 'react';
 import Radium from 'radium'
 
-import Container from '../components/Container.jsx';
-import Paper from 'material-ui/Paper';
-
 const styles = {
   base: {
     main: {
@@ -19,11 +16,12 @@ const styles = {
 };
 
 class Main extends React.Component {
+      //   <main style={styles.base.main} >
+      //     {this.props.children}
+      // </main>
   render() {
     return (
-      <main style={styles.base.main} >
-          {this.props.children}
-      </main>
+      <div>Hello</div>
     );
   }
 }

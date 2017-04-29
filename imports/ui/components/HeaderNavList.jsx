@@ -1,8 +1,7 @@
 import React from 'react';
 import Radium from 'radium'
-
-import FontIcon from 'material-ui/FontIcon';
 import { Link } from 'react-router';
+import FontIcon from 'material-ui/FontIcon';
 import HeaderNavListItem from './HeaderNavListItem.jsx';
 
 const styles = {

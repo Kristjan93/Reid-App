@@ -1,14 +1,13 @@
-// Numbers represent screen width in px.
 const breakpoints = {
-  desktop: { width: 1024, breakpoint: 'desktop' },
-  tablet:  { width: 767,  breakpoint: 'tablet'  },
-  mobile:  { width: 480,  breakpoint: 'mobile'  },
+  desktop: 1000,
+  tablet:  700,
+  mobile:  480,
 };
 
-function setBreakpoints (width) {
-  if (width <= breakpoints.mobile.width)       return { breakpoint: breakpoints.mobile.breakpoint  }; 
-  else if (width < breakpoints.desktop.width)  return { breakpoint: breakpoints.tablet.breakpoint  };
-  else                                         return { breakpoint: breakpoints.desktop.breakpoint };
+const mediaBreakpoints = {
+  desktop:  `@media(min-width: ${breakpoints.desktop}px)`,
+  tablet:   `@media(min-width: ${breakpoints.tablet}px)`,
+  mobile:   `@media(min-width: ${breakpoints.mobile}px)`,
 };
 
-export { setBreakpoints };
+export { breakpoints, mediaBreakpoints };

@@ -1,8 +1,10 @@
 import Home from '../../ui/pages/Home.jsx';
+import Gallery from '../../ui/pages/Gallery.jsx';
+import Contact from '../../ui/pages/Contact.jsx';
+import About from '../../ui/pages/About.jsx';
 import Container from '../../ui/components/Container.jsx';
 import NotFound from '../../ui/pages/NotFound.jsx';
-import LongTours from '../../ui/pages/LongTours.jsx';
-import ShortTours from '../../ui/pages/ShortTours.jsx';
+import Tours from '../../ui/pages/Tours.jsx';
 
 const routes = [
   {
@@ -10,21 +12,24 @@ const routes = [
     component: Home,
   },
   {
-    component: Container,
-    childRoutes: [
-      {
-        path: '/short-tours',
-        component: ShortTours,
-      },
-      {
-        path: '/long-tours',
-        component: LongTours,
-      },
-      {
-        path: '*',
-        component: NotFound,
-      },
-    ]
+    path: '/tours',
+    component: Tours,
+  },
+  {
+    path: '/gallery',
+    component: Gallery,
+  },
+  {
+    path: '/contact',
+    component: Contact,
+  },
+  {
+    path: '/about',
+    component: About,
+  },
+  {
+    path: '*',
+    component: NotFound,
   },
 ];
 

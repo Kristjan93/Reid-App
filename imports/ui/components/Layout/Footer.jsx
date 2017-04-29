@@ -3,11 +3,11 @@ import FontIcon from 'material-ui/FontIcon';
 import Radium from 'radium'
 
 import Divider from 'material-ui/Divider';
-import CompanyLogoImage from '../components/CompanyLogoImage.jsx';
-import FooterDefinitionList from '../components/FooterDefinitionList.jsx'
-import Container from '../components/Container.jsx';
+import CompanyLogoImage from '../CompanyLogoImage.jsx';
+import FooterDefinitionList from '../FooterDefinitionList.jsx'
+import Container from '../Container.jsx';
 
-import { DD_LINKS_TYPE } from '../constants/enums.js'
+import { DD_LINKS_TYPE } from '../../constants/enums.js'
 
 const styles = {
   base: {
