@@ -9,6 +9,7 @@ import { Link } from 'react-router';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
 
+import TourPointsInfo from '../components/Tour/TourPointsInfo.jsx';
 import { KIDS }
   from '../constants/srcPictures.js';
 import { mediaBreakpoints } from '../constants/breakpoints.js';
@@ -34,15 +35,17 @@ const styles = {
 };
 
 const Tour = ({ params ,route: { data } }) => {
-  let tour = data.filter(x => (x.id === params.id));
+  let filterTour = data.filter(x => (x.id === params.id));
+  let tour = filterTour[0] || filterTour[0];
   return (
     <div style={{ width: '100%' }}> 
       <div style={styles.Tour}>
         <div style={styles.Tour.item}>
           <Card>
             <CardMedia>
-              <img src={KIDS} />
+              <img src={tour.imageSrc} />
             </CardMedia>
+            
           </Card>
         </div>
         <div style={[styles.Tour.item, {display: 'initial', width: '100%'}]}>
@@ -50,7 +53,8 @@ const Tour = ({ params ,route: { data } }) => {
             <CardTitle title={'Title'} subtitle={'price'}/>
 
             <CardText style={{ fontSize: '1rem' }} >
-              sdknads asldksad saldknsadlkndsvjn asdlksndn sdlknasd sksn saldns.
+              {text}
+              <TourPointsInfo />
             </CardText>
 
             <CardActions>
@@ -67,4 +71,6 @@ const Tour = ({ params ,route: { data } }) => {
   );
 }
 
+
+let text = 'Come and experience the Icelandic horse in the beautiful nature. The surroundings are filled with mountain view, lava fields, varies flora and trees, a lake and a volcano named Helgafell. We take great pride in providing personal service and adapting the tour to our guests. Riding time is 1 hour and there are two time schedules to choose from. The tour is ideal for beginners and those who want a shorter ride.';
 export default Radium(Tour);
