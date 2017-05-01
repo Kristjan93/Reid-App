@@ -5,15 +5,25 @@ import About from '../../ui/pages/About.jsx';
 import Container from '../../ui/components/Container.jsx';
 import NotFound from '../../ui/pages/NotFound.jsx';
 import Tours from '../../ui/pages/Tours.jsx';
+import Tour from '../../ui/pages/Tour.jsx';
+
+import { tourItems as tourResources } from '../../ui/constants/tourItems.js';
 
 const routes = [
   {
     path: '/',
     component: Home,
+    data: tourResources,
   },
   {
     path: '/tours',
     component: Tours,
+    data: tourResources,
+  },
+  {
+    path: '/tours/:id',
+    component: Tour,
+    data: tourResources,
   },
   {
     path: '/gallery',

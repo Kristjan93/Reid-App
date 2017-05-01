@@ -6,7 +6,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Email from 'material-ui/svg-icons/communication/email';
 
 import TourList from '../components/TourList/TourList.jsx';
-import { tourItems } from '../constants/tourItems.js';
+
+import { mediaBreakpoints } from '../constants/breakpoints.js';
 
 const styles = {
   jumbotron: {
@@ -47,7 +48,14 @@ class Home extends React.Component {
         </div>
 
         <div>
-          <TourList tours={tourItems} />
+          <TourList tours={this.props.route.data} itemStyle={{
+            [mediaBreakpoints.tablet]: {
+              width: '50%',
+            },
+            [mediaBreakpoints.desktop]: {
+              width: '33.3333%',
+            },
+          }}/>
         </div>
         
         <div style={{

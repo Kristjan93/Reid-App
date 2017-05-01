@@ -1,6 +1,5 @@
 import React from 'react';
 import Radium from 'radium'
-import { mediaBreakpoints } from '../../constants/breakpoints.js';
 
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
@@ -13,15 +12,12 @@ const styles = {
   TourItem: {
     display: 'flex',
     padding: '1rem',
-    [mediaBreakpoints.tablet]: {
-      width: '50%',
-    },
   }
 };
 
-const TourItem = ({ title ,imageSrc ,imageWidth ,text ,style }) => {
+const TourItem = ({ id, title, price, duration ,imageSrc ,imageWidth ,text ,style }) => {
   return (
-    <div style={ [styles.TourItem]} >
+    <div style={ [styles.TourItem, style]} >
       <Card>
         <CardMedia
           overlayContentStyle={{ background: 'none', bottom: 'inherit' }}
@@ -29,10 +25,10 @@ const TourItem = ({ title ,imageSrc ,imageWidth ,text ,style }) => {
           <img src={imageSrc} />
         </CardMedia>
 
-        <CardTitle title="ISK 7.000" subtitle={
+        <CardTitle title={`ISK ${price}`} subtitle={
           <span>
             <FontIcon style={{ paddingRight: '5px' }} className="fa fa-clock-o" />
-            1 hours
+            {duration}
           </span>  
         }/>
 
@@ -41,7 +37,11 @@ const TourItem = ({ title ,imageSrc ,imageWidth ,text ,style }) => {
         </CardText>
 
         <CardActions>
-          <RaisedButton label="Book Tour" fullWidth={true} primary={true} />
+          <RaisedButton
+            containerElement={<Link to={`/tours/${id}`}/>}
+            label="Book Tour"
+            fullWidth={true}
+            primary={true} />
         </CardActions>
       </Card>
     </div>

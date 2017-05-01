@@ -18,8 +18,11 @@ const TourList = ({ style, itemStyle, tours, ...rest }) => {
       <For each="item" index="index" of={tours}>
         <TourItem
           key={index}
+          id={item.id}
           title={item.title}
           imageSrc={item.imageSrc}
+          price={item.price}
+          duration={item.duration}
           text={item.text}
           style={itemStyle}/>
       </For>

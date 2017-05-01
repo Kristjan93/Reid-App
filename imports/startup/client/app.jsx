@@ -1,6 +1,6 @@
-import { Meteor } from 'meteor/meteor';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { Meteor } from 'meteor/meteor';
+import { render } from 'react-dom';
 import { Router, browserHistory } from 'react-router';
 import { StyleRoot } from 'radium';
 
@@ -19,7 +19,7 @@ const rootRoute = {
 };
 
 Meteor.startup(() => {
-  ReactDOM.render(
+  render(
     <MuiThemeProvider>
       <StyleRoot>
         <Router history={browserHistory} routes={rootRoute} />
