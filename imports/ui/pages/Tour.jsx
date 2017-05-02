@@ -38,7 +38,22 @@ const Tour = ({ params ,route: { data } }) => {
   let filterTour = data.filter(x => (x.id === params.id));
   let tour = filterTour[0] || filterTour[0];
   return (
-    <div style={{ width: '100%' }}> 
+    <div style={{ width: '100%' }}>
+      
+      <div style={{
+        width: '100%',
+        height: '50vh'
+      }}>
+        <div style={{
+          backgroundImage: 'url(/images/lala.jpg)',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          width: '100%',
+          height: '100%',
+        }}>
+        </div>
+      </div>
       <div style={styles.Tour}>
         <div style={styles.Tour.item}>
           <Card>
