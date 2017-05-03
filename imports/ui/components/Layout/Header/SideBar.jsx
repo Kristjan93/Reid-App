@@ -1,21 +1,24 @@
 import React from 'react';
 import Radium from 'radium'
-import { Link } from 'react-router';
+import { Link } from 'react-router'; let _Link = Radium(Link);
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import navMenuItems from '../../../constants/navMenuItems.js'
 
 const SideBar = ({ drawerOpen, onRequestChange, handleClose, ...rest }) => {
-  const menuItems = ['Home', 'Tours', 'Gallery', 'Contact'];
   return (
     <Drawer
       docked={false}
       open={drawerOpen}
       onRequestChange={onRequestChange}>
 
-      {menuItems.map((item, index) => {
+      {navMenuItems.map((item, index) => {
         return (
-          <MenuItem key={index} onTouchTap={handleClose}>
-            {item}
+          <MenuItem
+            key={index}
+            primaryText={item.text}
+            containerElement={<Link style={{textDecoration: 'none'}} to={item.href}/>}
+            onTouchTap={handleClose}>
           </MenuItem>
         );
       })}

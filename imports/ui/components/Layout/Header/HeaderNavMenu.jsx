@@ -2,21 +2,14 @@ import React from 'react';
 import Radium from 'radium'
 import { Link } from 'react-router'; let _Link = Radium(Link);
 import { Mobile, Tablet, Desktop } from '../../Breakpoints.jsx';
-
-const menuItems = [
-  { text: 'Home', href: '/' },
-  { text: 'Tours', href: '/tours' },
-  { text: 'Gallery', href: '/gallery' },
-  { text: 'Contact', href: '/contact' },
-  { text: 'About', href: '/about' },
-];
+import navMenuItems from '../../../constants/navMenuItems.js'
 
 const HeaderNavMenu = (props) => {
   return (
     <nav>
     <Desktop>
       <ul key='ul' style={styles.ul}>
-      {menuItems.map((item, index) => {
+      {navMenuItems.map((item, index) => {
         return (
           <li key={index} style={styles.li}>
             <_Link key={index} style={styles.a} to={item.href}>
