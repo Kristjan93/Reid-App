@@ -38,11 +38,13 @@ class Home extends React.Component {
 
         <div style={ styles.jumbotron }>
           <div style={ styles.jumbotron.text }>
-            <h1 style={ styles.jumbotron.text.h1 }>
+            {/*<h1 style={ styles.jumbotron.text.h1 }>
               Tours
-            </h1>
+            </h1>*/}
             <div style={{}}>
-              <p style={styles.jumbotron.text.pDiv.p}>{lorem}</p>
+              <p style={styles.jumbotron.text.pDiv.p}>
+                We at Geysir horses  offer you a short riding tours, Suitable for both first time rider and experienced.  This  tour is ideal for families and those how like to visit Iceland and ride our wonderful horses in amazing landscape.  
+              </p>
             </div>
           </div>
         </div>

@@ -37,16 +37,6 @@ const styles = {
 const TourPointsInfo = ({ route, ...rest }) => {
   return (
     <div>
-      <Divider />
-      <ListItem
-        leftIcon={<Schedule />}
-        primaryText="Duration"
-        secondaryText={<p style={styles.TourPointsInfo.primaryText}>3 hours with transfer.</p>}
-      />
-      <Divider />
-      <ListItem
-        leftIcon={<Flag />}
-        primaryText="Departure"
         secondaryText={<p style={styles.TourPointsInfo.primaryText}>3 hours with transfer (Riding time 1.5 hours)</p>}
       />
       <Divider />
@@ -72,7 +62,6 @@ const TourPointsInfo = ({ route, ...rest }) => {
         secondaryText={<p style={styles.TourPointsInfo.primaryText}>
           We can pick you up</p>}
       />
-      <Divider />
       <Divider />
       <ListItem
         leftIcon={<LocalDining />}

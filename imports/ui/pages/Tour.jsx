@@ -54,21 +54,32 @@ const Tour = ({ params ,route: { data } }) => {
         }}>
         </div>
       </div>
+
+      <div style={{width: '100%', textAlign: 'center' }}>
+        <h1>Title</h1>
+        <p style={{
+          lineHeight: '1.5rem',
+          fontSize: '18px',
+          maxWidth: '900px',
+          margin: '0 auto'
+        }}>
+          {text}
+        </p>
+      </div>
+
       <div style={styles.Tour}>
-        <div style={styles.Tour.item}>
+        
+        {/*<div style={styles.Tour.item}>
           <Card>
             <CardMedia>
               <img src={tour.imageSrc} />
             </CardMedia>
             
           </Card>
-        </div>
+        </div>*/}
         <div style={[styles.Tour.item, {display: 'initial', width: '100%'}]}>
           <Card>
-            <CardTitle title={'Title'} subtitle={'price'}/>
-
             <CardText style={{ fontSize: '1rem' }} >
-              {text}
               <TourPointsInfo />
             </CardText>
 
@@ -87,5 +98,6 @@ const Tour = ({ params ,route: { data } }) => {
 }
 
 
-let text = 'Come and experience the Icelandic horse in the beautiful nature. The surroundings are filled with mountain view, lava fields, varies flora and trees, a lake and a volcano named Helgafell. We take great pride in providing personal service and adapting the tour to our guests. Riding time is 1 hour and there are two time schedules to choose from. The tour is ideal for beginners and those who want a shorter ride.';
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis sapien ut libero pellentesque, at volutpat mauris euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus sem lacus, lobortis sed pharetra in, commodo non tortor. Aliquam et tellus ornare, sodales turpis ut, congue.';
+
 export default Radium(Tour);

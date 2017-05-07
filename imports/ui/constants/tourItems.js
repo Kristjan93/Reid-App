@@ -4,25 +4,17 @@ const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facil
 
 const tourItems = [
   {
-    id: 'golden-tour',
-    title: 'Gullfoss Fall',
-    price: '7.000',
-    duration: '1 hour',
+    id: 'in-to-the-wild',
+    title: 'In To The Wild',
+    price: '13.000',
+    duration: '2 hour',
     imageSrc: CARDS_SPECIAL_WINTER_TOUR,
     text: 'Winter riding in the countryside and visit the most famous places in Iceland Gullfoss and Geysir.',
   },
   {
-    id: 'horse-in-me',
-    title: 'The Horse In Me',
-    price: '7.000',
-    duration: '1 hour',
-    imageSrc: CARDS_THREE_DAY_RIDE,
-    text: 'Opportunity to interact with the horses and experience Icelandic country living..',
-  },
-  {
-    id: 'lv-u-mom',
-    title: 'The Horse In Me',
-    price: '12.000',
+    id: 'country-ride',
+    title: 'Country Ride',
+    price: '9.000',
     duration: '1 hour',
     imageSrc: CARDS_THREE_DAY_RIDE,
     text: 'Opportunity to interact with the horses and experience Icelandic country living..',

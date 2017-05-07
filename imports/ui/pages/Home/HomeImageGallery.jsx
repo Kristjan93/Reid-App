@@ -3,7 +3,7 @@ import Radium from 'radium'
 import Paper from 'material-ui/Paper';
 import 'react-image-gallery/styles/css/image-gallery';
 import ImageGallery from 'react-image-gallery';
-import { HOME_ONE, HOME_TWO } from '../../constants/srcPictures.js';
+import { HOME_ONE, HOME_TWO, FOR_1, FOR_2, FOR_3 } from '../../constants/srcPictures.js';
 
 class HomeImageGallery extends React.Component {
 
@@ -14,12 +14,17 @@ class HomeImageGallery extends React.Component {
   render() {
     const images = [
       {
-        original: HOME_ONE,
+        original: FOR_1,
         description: 'See the incredible landscape in our area',
       },
       {
-        original: HOME_TWO,
-      }
+        original: FOR_2,
+        description: 'See the incredible landscape in our area',
+      },
+      {
+        original: FOR_3,
+        description: 'See the incredible landscape in our area',
+      },
     ];
     return (
         <Paper zDepth={1}>
