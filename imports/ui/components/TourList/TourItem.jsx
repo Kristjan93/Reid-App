@@ -21,7 +21,14 @@ const TourItem = ({ id, title, price, duration ,imageSrc ,imageWidth ,text ,styl
       <Card>
         <CardMedia
           overlayContentStyle={{ background: 'none', bottom: 'inherit' }}
-          overlay={<CardTitle titleStyle={{fontSize: '30px'}} title={title}/>}>
+
+          overlay={<CardTitle titleStyle={{
+            fontSize: '30px',
+            display: 'inline',
+            textShadow: 'black 0.1em 0.1em 0.7em',
+            padding: '5px',
+          }}
+            title={title} />}>
           <img src={imageSrc} />
         </CardMedia>
 

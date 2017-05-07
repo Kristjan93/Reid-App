@@ -11,6 +11,9 @@ const FOR_1 = '/images/for_1.jpg';
 const FOR_2 = '/images/for_2.jpg';
 const FOR_3 = '/images/for_3.jpg';
 
+const HOUR_1 = '/images/1hour.jpg';
+const HOUR_2 = '/images/2hour.jpg';
+
 const HOME_TWO = '/images/HomePicTwo.jpg';
 
 const KIDS = '/images/Kids.jpg';
@@ -25,4 +28,7 @@ export {
   FOR_1,
   FOR_2,
   FOR_3,
-  };
+  HOUR_1,
+  HOUR_2,
+};
+
