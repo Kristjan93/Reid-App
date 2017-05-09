@@ -14,11 +14,11 @@ class HomeImageGallery extends React.Component {
   render() {
     const images = [
       {
-        original: FOR_1,
+        original: FOR_2,
         description: 'See the incredible landscape in our area',
       },
       {
-        original: FOR_2,
+        original: FOR_1,
         description: 'See the incredible landscape in our area',
       },
       {

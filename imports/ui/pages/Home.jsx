@@ -9,13 +9,16 @@ import TourList from '../components/TourList/TourList.jsx';
 
 import { mediaBreakpoints } from '../constants/breakpoints.js';
 
+import { FOR_3 } from '../constants/srcPictures.js';
+import GoogleMap from './Home/GoogleMap.jsx';
+
 const styles = {
   jumbotron: {
     display: 'flex',
-    backgroundColor: '#f5f5f5',
+    height: '90vh',
     text: {
       flex: '1',
-      textAlign: 'center',
+      
       h1: {
         fontSize: '48px',
         margin: 0,
@@ -32,23 +35,37 @@ const styles = {
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div style={{width: '100%'}}>
         {/* TODO I hate this */}
-        <HomeImageGallery />
-
-        <div style={ styles.jumbotron }>
-          <div style={ styles.jumbotron.text }>
-            {/*<h1 style={ styles.jumbotron.text.h1 }>
-              Tours
-            </h1>*/}
-            <div style={{}}>
-              <p style={styles.jumbotron.text.pDiv.p}>
-                We at Geysir horses  offer you a short riding tours, Suitable for both first time rider and experienced.  This  tour is ideal for families and those how like to visit Iceland and ride our wonderful horses in amazing landscape.  
-              </p>
-            </div>
-          </div>
+        {/*<HomeImageGallery />*/}
+        <div style={{
+          width: '100%',
+          height: '60vh'
+        }}>
+          <div style={{
+            backgroundImage: `url(${FOR_3})`,
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            width: '100%',
+            height: '100%',
+          }}>
         </div>
+      </div>  
 
+      <div style={{width: '100%', textAlign: 'center' }}>
+        <h1>Title</h1>
+        <p style={{
+          lineHeight: '1.5rem',
+          fontSize: '18px',
+          maxWidth: '900px',
+          margin: '0 auto'
+        }}>
+          {lorem}
+        </p>
+      </div>
+
+        {/* 
         <div>
           <TourList tours={this.props.route.data} itemStyle={{
             [mediaBreakpoints.tablet]: {
@@ -58,7 +75,8 @@ class Home extends React.Component {
               width: '33.3333%',
             },
           }}/>
-        </div>
+          </div>
+          */}
         
         <div style={{
           padding: '26px 0',
@@ -97,12 +115,9 @@ class Home extends React.Component {
           <div style={{
             flex: '1 1 320px',
             height: '500px',
-            background: 'green',
             display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
           }}>
-            Google Maps.
+            <GoogleMap />
           </div>
         </div>
 
