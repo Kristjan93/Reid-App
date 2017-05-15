@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import HomeImageGallery from './Home/HomeImageGallery.jsx';
+//import HomeImageGallery from './Home/HomeImageGallery.jsx';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import Email from 'material-ui/svg-icons/communication/email';
@@ -10,6 +10,7 @@ import TourList from '../components/TourList/TourList.jsx';
 import { mediaBreakpoints } from '../constants/breakpoints.js';
 
 import { FOR_3 } from '../constants/srcPictures.js';
+
 import GoogleMap from './Home/GoogleMap.jsx';
 
 const styles = {
@@ -51,7 +52,7 @@ class Home extends React.Component {
             height: '100%',
           }}>
         </div>
-      </div>  
+      </div> 
 
       <div style={{width: '100%', textAlign: 'center' }}>
         <h1>Title</h1>
@@ -93,10 +94,8 @@ class Home extends React.Component {
             <div style={{ flex: '1', textAlign: 'center' }}>
               <p>Information</p>
               <ul>
-                <li>Most important</li>
-                <li>Second important</li>
-                <li>Forth because we lost third</li>
-                <li>Sorry for that</li>
+                <li>Booking</li>
+                <li>Important information</li>
               </ul>
             </div>
 
@@ -112,16 +111,19 @@ class Home extends React.Component {
             </div>
           </div>
 
-          <div style={{
+          <div
+            className='my-google-map'
+            style={{
             flex: '1 1 320px',
             height: '500px',
             display: 'flex',
           }}>
             <GoogleMap />
           </div>
+
         </div>
 
-      </div>  
+      </div>
     );
   }
 }

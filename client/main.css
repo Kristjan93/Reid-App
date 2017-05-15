@@ -39,8 +39,14 @@ img {
   max-width: 100%;
 }
 
+/*.my-google-map > div, .my-google-map {
+	display: flex;
+	flex: 1;
+}*/
+
 /*----------------------------------</Global >----------------------------------*/
 /*
+
 
 DONE
 	 nav > ul {
