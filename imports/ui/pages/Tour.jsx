@@ -34,9 +34,10 @@ const styles = {
   }
 };
 
+// TODO tour not Found.
 const Tour = ({ params ,route: { data } }) => {
   let filterTour = data.filter(x => (x.id === params.id));
-  let tour = filterTour[0] || filterTour[0];
+  let tour = filterTour[0] || null;
   return (
     <div style={{ width: '100%' }}>
       
@@ -77,10 +78,22 @@ const Tour = ({ params ,route: { data } }) => {
             
           </Card>
         </div>*/}
-        <div style={[styles.Tour.item, {display: 'initial', width: '100%'}]}>
+        <div key={1}
+        style={[styles.Tour.item, {display: 'initial', width: '100%'}]}>
           <Card>
             <CardText style={{ fontSize: '1rem' }} >
               <TourPointsInfo />
+            </CardText>
+          </Card>
+        </div>
+        
+        <div key={2}
+        style={[styles.Tour.item, {display: 'initial', width: '100%'}]}>
+          <Card>
+            <CardTitle title={'Booking'} />
+
+            <CardText style={{ fontSize: '1rem' }} >
+              General information booking by email, phone and question etc...
             </CardText>
 
             <CardActions>

@@ -3,7 +3,7 @@ import Radium from 'radium';
 
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
-import Subheader from 'material-ui/Subheader';
+
 import Avatar from 'material-ui/Avatar';
 import {grey400, darkBlack, lightBlack} from 'material-ui/styles/colors';
 import IconButton from 'material-ui/IconButton';
@@ -24,6 +24,10 @@ import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
 import ContentSend from 'material-ui/svg-icons/content/send';
 import ContentDrafts from 'material-ui/svg-icons/content/drafts';
+import Info from 'material-ui/svg-icons/action/info';
+import Close from 'material-ui/svg-icons/navigation/close';
+
+import PointInfo from './TourPointsInfo/PointInfo.jsx';
 
 const styles = {
   TourPointsInfo: {
@@ -34,43 +38,88 @@ const styles = {
   }
 };
 
-const TourPointsInfo = ({ route, ...rest }) => {
-  return (
-    <div>
-        secondaryText={<p style={styles.TourPointsInfo.primaryText}>3 hours with transfer (Riding time 1.5 hours)</p>}
-      />
-      <Divider />
-      <ListItem
-        leftIcon={<InsertEmoticon />}
-        primaryText="Riding skills"
-        secondaryText={<p style={styles.TourPointsInfo.primaryText}>For everyone.</p>}
-      />
-      <Divider />
-      <ListItem
-        leftIcon={<NaturePeople />}
-        primaryText="Gear and clothing"
-        secondaryText={<p style={styles.TourPointsInfo.primaryText}>
-            We provide all gear you need helmets, shoes, etc.
-            Given every whether we will have you covered in the appropriate cloths.
-          </p>}
-        secondaryTextLines={2}
-      />
-      <Divider />
-      <ListItem
-        leftIcon={<DriveEta />}
-        primaryText="Pickup from Reykjavík - (+2.500 ISK)"
-        secondaryText={<p style={styles.TourPointsInfo.primaryText}>
-          We can pick you up</p>}
-      />
-      <Divider />
-      <ListItem
-        leftIcon={<LocalDining />}
-        primaryText="Food is included"
-        secondaryText={<p style={styles.TourPointsInfo.primaryText}>
-          We have have food ! for the horses sorry</p>}
-      />
-    </div>
-  );
+class TourPointsInfo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+      rightIcon: <Info />,
+    };
+    this.handleToggle = this.handleToggle.bind(this);
+  }
+
+  handleToggle () {
+    this.setState({
+      open: !this.state.open,
+      rightIcon: this.state.open ? <Info /> : <Close />
+    });
+  };
+
+  render() {
+    let { route, ...rest } = this.props;
+    return (
+      <div>
+        <PointInfo
+          key={1}
+          leftIcon={<InsertEmoticon />}
+          primaryText="Riding skills"
+          secondaryText={<p style={styles.TourPointsInfo.primaryText}>For everyone.</p>}
+          primaryTogglesNestedList={true}
+          nestedInfoText={'Bla'} />
+
+        <Divider />
+
+        <PointInfo
+          key={2}
+          leftIcon={<NaturePeople />}
+          primaryText="Riding skills"
+          secondaryText={<p style={styles.TourPointsInfo.primaryText}>For everyone.</p>}
+          primaryTogglesNestedList={true} />
+
+          <Divider />
+      </div>
+    )
+  }
 }
 
 export default Radium(TourPointsInfo);
+
+      // <ListItem
+      //     leftIcon={<InsertEmoticon />}
+      //     primaryText="Riding skills"
+      //     secondaryText={<p style={styles.TourPointsInfo.primaryText}>For everyone.</p>}
+
+      //     rightIcon={this.state.rightIcon}
+      //     onNestedListToggle={this.handleToggle}
+      //     open={this.state.open}
+      //     primaryTogglesNestedList={true}
+      //     nestedItems={[
+      //       <ListItem key={1}
+      //         primaryText="Riding skills"  
+      //       />
+      //     ]}
+      // />
+      // <Divider />
+      // <ListItem
+      //   leftIcon={<NaturePeople />}
+      //   primaryText="Gear and clothing"
+      //   secondaryText={<p style={styles.TourPointsInfo.primaryText}>
+      //       We provide all gear you need helmets, shoes, etc.
+      //       Given every whether we will have you covered in the appropriate cloths.
+      //     </p>}
+      //   secondaryTextLines={2}
+      // />
+      // <Divider />
+      // <ListItem
+      //   leftIcon={<DriveEta />}
+      //   primaryText="Pickup from Reykjavík - (+2.500 ISK)"
+      //   secondaryText={<p style={styles.TourPointsInfo.primaryText}>
+      //     We can pick you up</p>}
+      // />
+      // <Divider />
+      // <ListItem
+      //   leftIcon={<LocalDining />}
+      //   primaryText="Food is included"
+      //   secondaryText={<p style={styles.TourPointsInfo.primaryText}>
+      //     We have have food ! for the horses sorry</p>}
+      // />

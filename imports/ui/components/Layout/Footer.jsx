@@ -59,7 +59,7 @@ const definitionLists = [
       {
         type: DD_LINKS_TYPE.LOCATION,
         text: 'Myrkholt',
-        href: 'https://goo.gl/maps/srr6BJtvbDU2',
+        href: 'https://goo.gl/maps/PArPqp6aQJ22',
       },
     ],
   },

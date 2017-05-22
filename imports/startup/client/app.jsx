@@ -22,7 +22,9 @@ Meteor.startup(() => {
   render(
     <MuiThemeProvider>
       <StyleRoot>
-        <Router history={browserHistory} routes={rootRoute} />
+        <Router
+          onUpdate={() => window.scrollTo(0, 0)}
+          history={browserHistory} routes={rootRoute} />
       </StyleRoot>
     </MuiThemeProvider>,
     document.getElementById('app')

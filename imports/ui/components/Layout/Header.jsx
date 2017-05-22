@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import { Link } from 'react-router'; let RadiumLink = Radium(Link);
+import { Link } from 'react-router'; let _Link = Radium(Link);
 
 import AppBar from 'material-ui/AppBar';
 import { List, ListItem } from 'material-ui/List';
@@ -13,6 +13,20 @@ import MenuIco from 'material-ui/svg-icons/navigation/menu';
 import HeaderNavMenu from './Header/HeaderNavMenu.jsx';
 import SideBar from './Header/SideBar.jsx';
 import { Mobile, Tablet, Desktop } from '../Breakpoints.jsx';
+
+import SvgIcon from 'material-ui/SvgIcon';
+
+const FacebookBoxIcon = (props) => (
+  <SvgIcon {...props}>
+    <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M18,5H15.5A3.5,3.5 0 0,0 12,8.5V11H10V14H12V21H15V14H18V11H15V9A1,1 0 0,1 16,8H18V5Z" />
+  </SvgIcon>
+);
+
+const FacebookIcon = (props) => (
+  <SvgIcon {...props}>
+    <path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+  </SvgIcon>
+);
 
 class Header extends React.Component {
   constructor(props) {
@@ -60,9 +74,10 @@ class Header extends React.Component {
 
               <div>
                 <IconButton 
-                  style={{width: 74, height: 64, padding: 0}}
-                  iconStyle={{ width: 26, height: 26 }}>
-                  <LocationOn />
+                  style={{width: 72, height: 64, padding: 0, textAlign: 'center'}}
+                  iconStyle={{ width: 26, height: 64, }}
+                  href='https://www.facebook.com/Geysirhorses/'>
+                  <FacebookIcon />
                 </IconButton>
               </div>
           </AppBar>
