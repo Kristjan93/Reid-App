@@ -32,7 +32,7 @@ const GoogleMap = (props) => {
         googleMapURL={_googleMapURL}
         loadingElement={
           <div style={{ height: '100%', textAlign: 'center' }}>
-            <p>Loading Google Maps</p>  
+            <p>Loading Google Maps...</p>  
             <CircularProgress size={80} thickness={5} />
           </div>
         } 

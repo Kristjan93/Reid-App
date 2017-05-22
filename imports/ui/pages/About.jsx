@@ -30,16 +30,9 @@ const Slide = (props) => {
 class About extends React.Component {
   render() {
     return (
-      <SwipeableViewsAutoPlay
-        interval={8000}
-        enableMouseEvents={true}
-        style={{width: '100%'}}
-        slideStyle={{ height: '60vh' }}
-        containerStyle={{  }}>
-          <Slide imageUrl={FOR_3}  text={'Slide 1'} />
-          <Slide imageUrl={FOR_2}  text={'Slide 2'} />
-          <Slide imageUrl={FOR_1}  text={'Slide 3'} />
-      </SwipeableViewsAutoPlay>
+      <div>
+          
+      </div>
     )
   }
 }

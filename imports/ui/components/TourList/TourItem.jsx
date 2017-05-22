@@ -40,7 +40,7 @@ const TourItem = ({ id, title, price, duration ,imageSrc ,imageWidth ,text ,styl
         }/>
 
         <CardText style={{ fontSize: '1rem' }} >
-          {lorem}
+          {text}
         </CardText>
 
         <CardActions>

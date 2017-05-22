@@ -9,7 +9,7 @@ const tourItems = [
     price: '13.000',
     duration: '2 hour',
     imageSrc: HOUR_2,
-    text: 'Winter riding in the countryside and visit the most famous places in Iceland Gullfoss and Geysir.',
+    text: 'Come and experience the Icelandic horse and experience an adventure to  ride in a beutiful nature.',
   },
   {
     id: 'country-ride',
@@ -17,7 +17,7 @@ const tourItems = [
     price: '9.000',
     duration: '1 hour',
     imageSrc: HOUR_1,
-    text: 'Opportunity to interact with the horses and experience Icelandic country living..',
+    text: 'Come and ride whit us and experience our friendly Icelandic horses in the beutiful nature.  upplifðu íslenska hestinn í sínu upprunalega umhverfi.  litlir hópar, persónuleg þjónusta.  wonderful experiance for frends and family',
   },
 ];
 

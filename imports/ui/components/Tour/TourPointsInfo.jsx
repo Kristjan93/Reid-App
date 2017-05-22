@@ -72,11 +72,42 @@ class TourPointsInfo extends React.Component {
         <PointInfo
           key={2}
           leftIcon={<NaturePeople />}
-          primaryText="Riding skills"
-          secondaryText={<p style={styles.TourPointsInfo.primaryText}>For everyone.</p>}
+          primaryText="What is included"
+          secondaryText={
+            <p style={styles.TourPointsInfo.primaryText}>
+              Riding helmets and if needed rainwear. 
+            </p>}
+          primaryTogglesNestedList={true} />
+        
+        <Divider />
+
+        <PointInfo
+          key={3}
+          leftIcon={<Schedule />}
+          primaryText="Departure"
+          secondaryText={
+            <p style={styles.TourPointsInfo.primaryText}>
+              Daily at 11:00 and 14:00. <br />
+              Please be at the stable 15 minutes before departure.
+            </p>}
           primaryTogglesNestedList={true} />
 
-          <Divider />
+        <Divider />
+        
+        
+        <Divider />
+
+        <PointInfo
+          key={5}
+          leftIcon={<InsertEmoticon />}
+          primaryText="What to bring"
+          secondaryText={<p></p>}
+          primaryTogglesNestedList={true}
+          nestedInfoText={'We reccomend that you bring warm gloves and a thin hat that can fit under the riding helmet. Included in the price is that you can borrow; A helmet, a warm overall or rain coat and rain pants also we have rubber boots.'} />
+
+        <Divider />
+        * Duration
+        * Accommodation ?  -> Link gljasteinn .is
       </div>
     )
   }
