@@ -1,13 +1,18 @@
 import React from 'react';
-import { layoutGenerator } from 'react-break';
 import breakpoints from '../constants/breakpoints.js';
 
-const layout = layoutGenerator({
-  mobile: 0,
-  tablet: 768,
-  desktop: 1000,
-});
-
-export const Mobile = layout.is('mobile');
-export const Tablet = layout.is('tablet');
-export const Desktop = layout.is('desktop');
+export const Mobile = (props) => {
+  return (
+    <span>{props.children}</span>
+  )
+};
+export const Tablet = (props) => {
+  return (
+    <span>{props.children}</span>
+  )
+};
+export const Desktop = (props) => {
+  return (
+    <span>{props.children}</span>
+  )
+};
