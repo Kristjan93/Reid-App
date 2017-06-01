@@ -1,9 +1,8 @@
 import React from 'react';
 import Radium from 'radium'
 
-import Header from './components/Layout/Header.jsx';
-import Main from './components/Layout/Main.jsx';
-import Footer from './components/Layout/Footer.jsx';
+import Header from '/imports/ui/Layout/Header.jsx'
+import Footer from '/imports/ui/Layout/Footer.jsx'
 
 const styles = {
   Layout: {

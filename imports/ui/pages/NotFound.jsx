@@ -12,7 +12,7 @@ const styles = {
 class NotFound extends React.Component {
   render() {
     return (
-      <Paper zDepth={2}>
+      <Paper zDepth={1}>
         <h1 style={styles.base} >404 Not Found</h1>
       </Paper>
     );

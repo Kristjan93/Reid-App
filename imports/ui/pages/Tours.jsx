@@ -1,7 +1,10 @@
 import React from 'react';
 import Radium from 'radium';
-import TourList from '../components/TourList/TourList.jsx';
-import { mediaBreakpoints } from '../constants/breakpoints.js';
+
+import { mediaBreakpoints } from '/imports/ui/variables/breakpoints.js';
+import { _Tours } from '/imports/api/Tours.js';
+
+import TourList from './Tours/TourList.jsx';
 
 const styles = {
   Tours: {
@@ -14,10 +17,12 @@ const styles = {
   }
 };
 
-const Tours = ({ route, ...rest }) => {
+const Tours = ({ ...rest }) => {
+  tours = _Tours.get();
+
   return (
     <div style={styles.Tours}>
-      <TourList tours={route.data} itemStyle={styles.Tours.item}/>
+      <TourList tours={tours} itemStyle={styles.Tours.item}/>
     </div>
   );
 }

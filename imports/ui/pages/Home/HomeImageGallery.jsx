@@ -3,7 +3,7 @@ import Radium from 'radium'
 import Paper from 'material-ui/Paper';
 import 'react-image-gallery/styles/css/image-gallery';
 import ImageGallery from 'react-image-gallery';
-import { HOME_ONE, HOME_TWO, FOR_1, FOR_2, FOR_3 } from '../../constants/srcPictures.js';
+import { FOR_1, FOR_2, FOR_3 } from '../../constants/srcPictures.js';
 
 class HomeImageGallery extends React.Component {
 

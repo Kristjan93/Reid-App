@@ -1,21 +1,16 @@
 import React from 'react';
 import Radium from 'radium';
+import { Link } from 'react-router'; let _Link = Radium(Link);
 //import HomeImageGallery from './Home/HomeImageGallery.jsx';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import Email from 'material-ui/svg-icons/communication/email';
 
-import TourList from '../components/TourList/TourList.jsx';
+import { mediaBreakpoints } from '/imports/ui/variables/breakpoints.js';
+import { FOR_3 } from '/imports/ui/variables/paths/Images.js';
+import GoogleMap from '/imports/ui/common/GoogleMap.jsx';
 
-import { mediaBreakpoints } from '../constants/breakpoints.js';
-
-import { FOR_3 } from '../constants/srcPictures.js';
-
-import GoogleMap from './Home/GoogleMap.jsx';
-
-import { Link } from 'react-router'; let _Link = Radium(Link);
-
-import Carousel from '../components/Carousel.jsx';
+import Carousel from '/imports/ui/common/Carousel.jsx';
 
 const styles = {
   jumbotron: {
@@ -78,7 +73,7 @@ class Home extends React.Component {
 
             label="Our Tours"
             primary={true}
-            containerElement={<_Link to='/Tours' style={{ textDecoration: 'none' }} />}
+            containerElement={<_Link to='/tours' style={{ textDecoration: 'none' }} />}
         />
       </div>
           
