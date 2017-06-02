@@ -22,7 +22,7 @@ const styles = {
       flexWrap: 'wrap',
       margin: '0',
       padding: '1rem',
-      [mediaBreakpoints.tablet]: {
+      [mediaBreakpoints.min.tablet]: {
         width: '50%',
       },
     },

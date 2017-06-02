@@ -10,7 +10,7 @@ const styles = {
   Tours: {
     width: '100%',
     item: {
-      [mediaBreakpoints.tablet]: {
+      [mediaBreakpoints.min.tablet]: {
         width: '50%',
       },
     },
