@@ -2,24 +2,45 @@ import React from 'react';
 import Radium from 'radium';
 import { Link } from 'react-router'; let _Link = Radium(Link);
 
+import { mediaBreakpoints } from '/imports/ui/variables/breakpoints.js';
+
 import RaisedButton from 'material-ui/RaisedButton';
 
 const styles = {
   root: {
     width: '100%', 
     textAlign: 'center',
-    height: '40vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+
+    height: 'initial',
+    [mediaBreakpoints.min.mobile]: {
+      height: '50vh',
+    },
   },
   container: {
     maxWidth: '680px',
+  },
+  header:{
+    margin: '26px 0',
   },
   text: {
     lineHeight: '2.5rem',
     fontSize: '26px',
     margin: 0,
+  },
+  button: {
+    margin: '26px 0',
+    minWidth: '160px',
+
+    buttonStyle: {
+      height: '46px',
+      lineHeight: '46px',
+    },
+    overlayStyle: {
+      height: '46px',
+    },
   }
 };
 
@@ -27,7 +48,7 @@ const IntroTextBlock = (props) => {
   return (
     <div style={ styles.root } >
       <div style={ styles.container } >
-        <h1>
+        <h1 style={ styles.header }>
           Title
         </h1>
         <p style={ styles.text }>
@@ -35,9 +56,9 @@ const IntroTextBlock = (props) => {
         </p>
 
         <RaisedButton
-            style={{ marginTop: '10px', minWidth: '160px', }}
-            buttonStyle={{ height: '46px', lineHeight: '46px' }}
-            overlayStyle={{ height: '46px' }}
+            style={ styles.button }
+            buttonStyle={ styles.button.buttonStyle }
+            overlayStyle={ styles.button.overlayStyle } 
             label="Our Tours"
             primary={true}
             containerElement={<_Link to='/tours' style={{ textDecoration: 'none' }} />} 

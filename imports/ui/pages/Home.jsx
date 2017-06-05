@@ -1,17 +1,15 @@
 import React from 'react';
 import Radium from 'radium';
 import { Link } from 'react-router'; let _Link = Radium(Link);
-//import HomeImageGallery from './Home/HomeImageGallery.jsx';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import Email from 'material-ui/svg-icons/communication/email';
 
 import { mediaBreakpoints } from '/imports/ui/variables/breakpoints.js';
 import { FOR_3 } from '/imports/ui/variables/paths/Images.js';
+
 import GoogleMap from '/imports/ui/common/GoogleMap.jsx';
-
-import IntroTextBlock from './Home/IntoTextBlock.jsx';
-
+import IntroTextBlock from './Home/IntroTextBlock.jsx';
 import Carousel from '/imports/ui/common/Carousel.jsx';
 
 const styles = {
@@ -42,23 +40,8 @@ class Home extends React.Component {
       <Carousel />
 
       <IntroTextBlock />
-          
 
-        {/* 
-        <div>
-          <TourList tours={this.props.route.data} itemStyle={{
-            [mediaBreakpoints.tablet]: {
-              width: '50%',
-            },
-            [mediaBreakpoints.desktop]: {
-              width: '33.3333%',
-            },
-          }}/>
-          </div>
-          */}
-        
         <div style={{
-          padding: '26px 0',
           display: 'flex',
           flexWrap: 'wrap',
         }}>
@@ -105,5 +88,5 @@ class Home extends React.Component {
     );
   }
 }
-// background-color: #f5f5f5;
+
 export default Radium(Home);
