@@ -8,24 +8,11 @@ const SwipeableViewsAutoPlay = autoPlay(SwipeableViews);
 import { FOR_1, FOR_2, FOR_3 } from '/imports/ui/variables/paths/Images.js';
 
 import Pagination from './Carousel/Pagination.jsx';
+import Slide from './Carousel/Slide.jsx';
 
 const styles = {
 
 };
-
-const Slide = (props) => {
-  return (
-    <div style={{
-      backgroundImage: `url(${props.imageUrl})`,
-      backgroundPosition: 'center center',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      width: '100%',
-      height: '100%',
-    }}>
-    </div>
-  );
-}
 
 class Carousel extends React.Component {
   constructor(props) {

@@ -10,6 +10,8 @@ import { mediaBreakpoints } from '/imports/ui/variables/breakpoints.js';
 import { FOR_3 } from '/imports/ui/variables/paths/Images.js';
 import GoogleMap from '/imports/ui/common/GoogleMap.jsx';
 
+import IntroTextBlock from './Home/IntoTextBlock.jsx';
+
 import Carousel from '/imports/ui/common/Carousel.jsx';
 
 const styles = {
@@ -36,46 +38,10 @@ class Home extends React.Component {
   render() {
     return (
       <div style={{width: '100%'}}>
-        {/* TODO I hate this */}
-        {/*<HomeImageGallery />*/}
-        
-        {/*<div style={{
-          width: '100%',
-          height: '60vh'
-        }}>
-          <div style={{
-            backgroundImage: `url(${FOR_3})`,
-            backgroundPosition: 'center center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            width: '100%',
-            height: '100%',
-          }}>
-        </div>
-      </div> */}
-      <Carousel />  
 
-      <div style={{width: '100%', textAlign: 'center' }}>
-        <h1>Come Ride With Us?</h1>
-        <p style={{
-          lineHeight: '1.5rem',
-          fontSize: '18px',
-          maxWidth: '900px',
-          margin: '0 auto'
+      <Carousel />
 
-        }}>
-          {lorem}
-        </p>
-        <RaisedButton
-            style={{ marginTop: '10px', minWidth: '160px', }}
-            buttonStyle={{ height: '46px', lineHeight: '46px' }}
-            overlayStyle={{ height: '46px' }}
-
-            label="Our Tours"
-            primary={true}
-            containerElement={<_Link to='/tours' style={{ textDecoration: 'none' }} />}
-        />
-      </div>
+      <IntroTextBlock />
           
 
         {/* 
@@ -141,6 +107,3 @@ class Home extends React.Component {
 }
 // background-color: #f5f5f5;
 export default Radium(Home);
-
-
-const lorem = 'We at Geysir horses  offer you a short riding tours, Suitable for both first time rider and experienced.  This  tour is ideal for families and those how like to visit Iceland and ride our wonderful horses in amazing landscape.'

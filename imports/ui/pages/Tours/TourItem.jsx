@@ -13,6 +13,7 @@ import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'm
 const styles = {
   TourItem: {
     display: 'flex',
+    justifyContent: 'center',
     padding: '1rem',
   }
 };

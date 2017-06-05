@@ -51,7 +51,17 @@ const Tour = ({ params, ...rest }) => {
       </div>
 
       <div style={{width: '100%', textAlign: 'center' }}>
-        <h1>{title}</h1>
+        
+        <h1 style={{ marginBottom: '4px' }}>
+          {title}
+        </h1>
+        <h2 style={{ 
+          fontSize: '1rem',
+          marginBottom: '26px',
+         }} >
+          - Available in summer time -
+        </h2>
+
         <p style={{
           lineHeight: '1.5rem',
           fontSize: '18px',
