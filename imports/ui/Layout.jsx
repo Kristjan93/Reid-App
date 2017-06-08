@@ -13,7 +13,7 @@ const styles = {
   },
   main: {
     display: 'flex',
-    flex: '1',
+    flex: '0 1 auto',
   },
   footer: {
     padding: '20px',

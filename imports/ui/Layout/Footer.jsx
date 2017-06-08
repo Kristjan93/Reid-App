@@ -14,15 +14,17 @@ import FooterDefinitionList from './Footer/FooterDefinitionList.jsx';
 const styles = {
   base: {
     footer: {
-      //display: 'flex',
       background: '#edeff0',
       color: '#8d9aa5',
-      minHeight: '50px',
     },
     companyLogoImage: {
       width: '105px',
     },
     Container: {
+      maxWidth: '1400px',
+      margin: '0 auto',
+      padding: '26px',
+
       display: 'flex',
       flexFlow: 'row wrap',
       justifyContent: 'space-between',
@@ -80,10 +82,9 @@ class Footer extends React.Component {
   render() {
     return (
       <footer style={styles.base.footer}>
-        <Container style={styles.base.Container} >
-            <Divider style={ {width: '100%'} } />
+        <div style={styles.base.Container} >
             {definitionLists.map(this.renderDefinitionList)}
-        </Container>
+        </div>
       </footer>
     );
   }

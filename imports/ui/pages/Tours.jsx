@@ -14,7 +14,7 @@ const styles = {
         width: '50%',
       },
     },
-    //maxWidth: '1600px',
+    maxWidth: '1400px',
     //width: '100%',
     margin: '0 auto',
     //padding: '0 26px',

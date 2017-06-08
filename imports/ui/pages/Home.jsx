@@ -10,80 +10,32 @@ import { FOR_3 } from '/imports/ui/variables/paths/Images.js';
 
 import GoogleMap from '/imports/ui/common/GoogleMap.jsx';
 import IntroTextBlock from './Home/IntroTextBlock.jsx';
+import IntroSellUsInfo from './Home/IntroSellUsInfo.jsx';
 import Carousel from '/imports/ui/common/Carousel.jsx';
 
 const styles = {
-  jumbotron: {
-    display: 'flex',
-    height: '90vh',
-    text: {
-      flex: '1',
-      
-      h1: {
-        fontSize: '48px',
-        margin: 0,
-      },
-      pDiv: {
-        p: {
-          fontSize: '24px',
-        },
-      }
-    },
-  }
+  root: {
+    width: '100%',
+  },
+  mapContainer: {
+    margin: '26px 0 0 0',
+    height: '500px',
+  },
 };
 
 class Home extends React.Component {
   render() {
     return (
-      <div style={{width: '100%'}}>
+      <div style={ styles.root }>
+        <Carousel />
 
-      <Carousel />
+        <IntroTextBlock />
 
-      <IntroTextBlock />
+        <IntroSellUsInfo />
 
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-        }}>
-          <div style={{
-            flex: '1 1 320px',
-            height: '500px',
-            background: 'grey',
-            display: 'flex',
-            flexDirection: 'column',
-          }}>
-            <div style={{ flex: '1', textAlign: 'center' }}>
-              <p>Information</p>
-              <ul>
-                <li>Booking</li>
-                <li>Important information</li>
-              </ul>
-            </div>
-
-            <div style={{ flex: '1', textAlign: 'center' }}>
-              <p>Can we Help you ?</p>
-              <RaisedButton style={{ margin: '12px' }}
-                label="Contact us"
-                labelPosition="after"
-                primary={true}
-                icon={<Email />}
-              />
-              <p>Or contact us by phone 112</p>
-            </div>
-          </div>
-
-          <div
-            className='my-google-map'
-            style={{
-            flex: '1 1 320px',
-            height: '500px',
-            display: 'flex',
-          }}>
-            <GoogleMap />
-          </div>
-
+        <div style={ styles.mapContainer } className='my-google-map'>
+          <GoogleMap />
         </div>
-
       </div>
     );
   }

@@ -5,12 +5,16 @@ import { KIDS } from '/imports/ui/variables/paths/Images.js';
 import { mediaBreakpoints } from '/imports//ui/variables/breakpoints.js';
 import { _Tours } from '/imports/api/Tours.js';
 
-
 import BookingCard from './Tour/BookingCard.jsx';
 import PointInfoCard from './Tour/PointInfoCard.jsx'
+import GoodToKnowInfo from './Tour/GoodToKnowInfo.jsx';
 import NotFound from './NotFound.jsx';
 
 const styles = {
+  contentContainer: {
+    maxWidth: '1400px',
+    padding: '26px 26px',
+  },
   Tour: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -38,6 +42,7 @@ const Tour = ({ params, ...rest }) => {
 
   return (
     <div style={{ width: '100%' }}>
+      
       <div style={{ width: '100%', height: '50vh' }}>
         <div style={{
           backgroundImage: 'url(/images/lala.jpg)',
@@ -72,16 +77,28 @@ const Tour = ({ params, ...rest }) => {
         </p>
       </div>
 
-      <div style={styles.Tour}>
-        <div key={1} style={ [styles.Tour.item, {display: 'initial', width: '100%'}] }>
-          <PointInfoCard info={info} />
+      <div style={{
+        maxWidth: '1400px',
+        margin: '26px auto',
+      }}>
+        <div style={styles.Tour}>
+          <div 
+            key={1} 
+            style={ [styles.Tour.item, {display: 'initial', width: '100%'}] }
+          >
+            <PointInfoCard info={info} />
+          </div>
+          
+          <div 
+            key={2} 
+            style={[styles.Tour.item, {display: 'initial', width: '100%'}]}
+          >
+            <BookingCard />
+          </div>
         </div>
-        
-        <div key={2} style={[styles.Tour.item, {display: 'initial', width: '100%'}]}>
-          <BookingCard />
-        </div>
-      </div>
 
+        <GoodToKnowInfo />
+      </div>
     </div>
   );
 }

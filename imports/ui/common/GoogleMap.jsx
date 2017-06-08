@@ -12,7 +12,7 @@ const SimpleMapExampleGoogleMap = withScriptjs(
   withGoogleMap(props => (
     <_GoogleMap
       ref={props.onMapLoad}
-      defaultZoom={11}
+      defaultZoom={12}
       defaultCenter={{ lat: 64.304613, lng: -20.219680 }}
       options={{ scrollwheel: false }}>
       <Marker
