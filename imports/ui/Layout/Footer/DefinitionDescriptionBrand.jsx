@@ -1,8 +1,6 @@
 import React from 'react';
 import Radium from 'radium'
 
-import { DD_LINKS_TYPE } from '/imports/ui/constants/enums.js';
-
 const styles = {
   base: {
     dd: {

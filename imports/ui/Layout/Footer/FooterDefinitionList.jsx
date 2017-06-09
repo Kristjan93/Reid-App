@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium'
 
-import { DD_LINKS_TYPE } from '/imports/ui/constants/enums.js';
+import { LinkTypes } from '/imports/ui/variables/linkTypes.js';
 
 import DefinitionDescriptionLink from './DefinitionDescriptionLink.jsx';
 import DefinitionDescriptionBrand from './DefinitionDescriptionBrand.jsx';
@@ -27,7 +27,7 @@ class FooterDefinitionList extends React.Component {
   }
 
   renderDefinition(item, index) {
-    if (item.type !== DD_LINKS_TYPE.BRAND) {
+    if (item.type !== LinkTypes.BRAND) {
       return (
         <DefinitionDescriptionLink
           key={index}

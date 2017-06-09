@@ -1,9 +1,8 @@
-
-const DD_LINKS_TYPE = {
+const LinkTypes = {
   EMAIL:    'email',
   LOCATION: 'location',
   PHONE:    'phone',
   BRAND:     'brand',
 };
 
-export { DD_LINKS_TYPE };
+export { LinkTypes };

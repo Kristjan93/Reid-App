@@ -10,7 +10,7 @@ import { FOR_3 } from '/imports/ui/variables/paths/Images.js';
 
 import GoogleMap from '/imports/ui/common/GoogleMap.jsx';
 import IntroTextBlock from './Home/IntroTextBlock.jsx';
-import IntroSellUsInfo from './Home/IntroSellUsInfo.jsx';
+import LandingPageInfoList from './Home/LandingPageInfoList.jsx';
 import Carousel from '/imports/ui/common/Carousel.jsx';
 
 const styles = {
@@ -31,7 +31,7 @@ class Home extends React.Component {
 
         <IntroTextBlock />
 
-        <IntroSellUsInfo />
+        <LandingPageInfoList />
 
         <div style={ styles.mapContainer } className='my-google-map'>
           <GoogleMap />

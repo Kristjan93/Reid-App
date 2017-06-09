@@ -1,23 +1,17 @@
 import React from 'react';
 import Radium from 'radium';
-import { Link } from 'react-router'; let _Link = Radium(Link);
 
 import AppBar from 'material-ui/AppBar';
-import { List, ListItem } from 'material-ui/List';
-import FlatButton from 'material-ui/FlatButton';
-import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
-import LocationOn from 'material-ui/svg-icons/communication/location-on';
 import MenuIco from 'material-ui/svg-icons/navigation/menu';
 
-
-import FacebookBoxIcon from '/imports/ui/common/customSvg/FacebookBoxIcon.jsx';
 import FacebookIcon from '/imports/ui/common/customSvg/FacebookIcon.jsx';
 
 import HeaderNavMenu from './Header/HeaderNavMenu.jsx';
 import SideBar from './Header/SideBar.jsx';
 
 import { mediaBreakpoints } from '/imports/ui/variables/breakpoints.js';
+import { navMenuItems } from '/imports/ui/variables/navMenuItems.js';
 
 class Header extends React.Component {
   constructor(props) {
@@ -48,7 +42,7 @@ class Header extends React.Component {
             title={null}
             iconElementLeft={null}
             iconElementRight={null}
-            showMenuIconButton={false}>
+            showMenuIconButton={false} >
           
               <div style={{ marginRight: '26px' }}>
                 <IconButton
@@ -65,7 +59,7 @@ class Header extends React.Component {
                   display: 'none'
                 }
               }}>
-                <HeaderNavMenu />
+                <HeaderNavMenu navMenuItems={navMenuItems} />
               </div>
 
               <div style={{
@@ -84,6 +78,8 @@ class Header extends React.Component {
           </AppBar>
 
           <SideBar
+            navMenuItems={navMenuItems}
+          
             drawerOpen={this.state.drawerOpen}
             onRequestChange={this.onRequestChange}
             handleToggle={this.handleToggle}

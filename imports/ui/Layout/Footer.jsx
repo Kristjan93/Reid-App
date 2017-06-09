@@ -4,7 +4,7 @@ import Radium from 'radium'
 import FontIcon from 'material-ui/FontIcon';
 import Divider from 'material-ui/Divider';
 
-import { DD_LINKS_TYPE } from '/imports/ui/constants/enums.js';
+import { LinkTypes } from '/imports/ui/variables/linkTypes.js';
 
 import CompanyLogoImage from '/imports/ui/common/CompanyLogoImage.jsx';
 import Container from '/imports/ui/common/Container.jsx';
@@ -37,7 +37,7 @@ const definitionLists = [
     title: (<a href='/'><CompanyLogoImage style={styles.base.companyLogoImage} /></a>),
     definitionDescriptions: [
       {
-        type: DD_LINKS_TYPE.BRAND,
+        type: LinkTypes.BRAND,
         text: 'General information concerning what the company is all about.',
       }
     ],
@@ -46,12 +46,12 @@ const definitionLists = [
     title: 'Contact',
     definitionDescriptions: [
       {
-        type: DD_LINKS_TYPE.EMAIL,
+        type: LinkTypes.EMAIL,
         text: 'myrkholt@gmail.com',
         href: "mailto:krillinn@gmail.com",
       },
       {
-        type: DD_LINKS_TYPE.PHONE,
+        type: LinkTypes.PHONE,
         text: 'Tel: +354 774-1149',
         href: "tel:+6494452687",
       }
@@ -61,7 +61,7 @@ const definitionLists = [
     title: 'Address',
     definitionDescriptions: [
       {
-        type: DD_LINKS_TYPE.LOCATION,
+        type: LinkTypes.LOCATION,
         text: 'Myrkholt',
         href: 'https://goo.gl/maps/PArPqp6aQJ22',
       },

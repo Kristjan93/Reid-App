@@ -13,11 +13,6 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-
-    height: 'initial',
-    [mediaBreakpoints.min.mobile]: {
-      height: '50vh',
-    },
   },
   container: {
     maxWidth: '680px',
@@ -46,7 +41,7 @@ const styles = {
 
 const IntroTextBlock = (props) => {
   return (
-    <div style={ styles.root } >
+    <div style={ styles.root }>
       <div style={ styles.container } >
         <h1 style={ styles.header }>
           Title

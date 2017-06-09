@@ -2,9 +2,7 @@ import React from 'react';
 import Radium from 'radium'
 import { Link } from 'react-router'; let _Link = Radium(Link);
 
-import navMenuItems from '/imports/ui/constants/navMenuItems.js'
-
-const HeaderNavMenu = (props) => {
+const HeaderNavMenu = ({ navMenuItems }) => {
   return (
     <nav>
       <ul key='ul' style={styles.ul}>

@@ -4,7 +4,7 @@ import Radium from 'radium'
 import FontIcon from 'material-ui/FontIcon';
 import FlatButton from 'material-ui/FlatButton';
 
-import { DD_LINKS_TYPE } from '/imports/ui/constants/enums.js';
+import { LinkTypes } from '/imports/ui/variables/linkTypes.js';
 
 const styles = {
   base: {
@@ -31,15 +31,15 @@ class DefinitionDescriptionLink extends React.Component {
   render() {
     let linkIconClass;
     switch (this.props.type) {
-      case DD_LINKS_TYPE.EMAIL:
+      case LinkTypes.EMAIL:
         linkIconClass = 'fa fa-envelope';
         break;
 
-      case DD_LINKS_TYPE.PHONE:
+      case LinkTypes.PHONE:
         linkIconClass = 'fa fa-phone';
         break;
 
-      case DD_LINKS_TYPE.LOCATION:
+      case LinkTypes.LOCATION:
         linkIconClass = 'fa fa-map-marker';
         break;
 
