@@ -4,7 +4,8 @@ import Radium from 'radium';
 import { Card, CardMedia } from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 
-import { breakpoints, mediaBreakpoints } from '/imports/ui/variables/breakpoints.js';
+import { breakpoints, mediaBreakpoints }
+  from '/imports/ui/variables/breakpoints.js';
 import { HOUR_1 } from '/imports/ui/variables/paths/Images.js';
 
 
@@ -14,7 +15,6 @@ styles = {
     margin: '26px auto',
     paddingBottom: '26px',
   },
-
   articleTitle: {
     fontWeight: '600',
     marginBottom: '15px',
@@ -25,17 +25,17 @@ styles = {
     width: '100%',
     padding: '0 26px',
     [mediaBreakpoints.min.tablet]: {
-        width: '50%',
+      width: '50%',
     },
   },
   imageSection: {
     width: '100%',
     padding: '0 1rem',
     [mediaBreakpoints.min.tablet]: {
-        width: '50%',
+      width: '50%',
     },
   },
-}
+};
 
 class About extends React.Component {
   render() {

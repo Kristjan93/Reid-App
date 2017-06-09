@@ -5,13 +5,12 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import MenuIco from 'material-ui/svg-icons/navigation/menu';
 
-import FacebookIcon from '/imports/ui/common/customSvg/FacebookIcon.jsx';
-
-import HeaderNavMenu from './Header/HeaderNavMenu.jsx';
-import SideBar from './Header/SideBar.jsx';
-
 import { mediaBreakpoints } from '/imports/ui/variables/breakpoints.js';
 import { navMenuItems } from '/imports/ui/variables/navMenuItems.js';
+
+import FacebookIcon from '/imports/ui/common/customSvg/FacebookIcon.jsx';
+import HeaderNavMenu from './Header/HeaderNavMenu.jsx';
+import SideBar from './Header/SideBar.jsx';
 
 class Header extends React.Component {
   constructor(props) {

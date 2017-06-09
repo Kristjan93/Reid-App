@@ -37,38 +37,36 @@ styles = {
   },
 }
 
-class Contact extends React.Component {
-  render() {
-    return (
-      <div style={ styles.root } >
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          margin: '0',
-          padding: '0',
-          //border: '1px solid #e0e0e0',
-        }}>
-          <div key={1} style={ styles.imageSection } >
-            <Card>
-              <CardMedia>
-                <img src={HOUR_1} />
-              </CardMedia>
-            </Card>
-          </div>
+const Contact = (props) => {
+  return (
+    <div style={styles.root} >
+      <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        margin: '0',
+        padding: '0',
+        //border: '1px solid #e0e0e0',
+      }}>
+        <div key={1} style={styles.imageSection} >
+          <Card>
+            <CardMedia>
+              <img src={HOUR_1} />
+            </CardMedia>
+          </Card>
+        </div>
 
-          <div key={2} style={ styles.section } >
-              <h1 style={{ marginTop: 0 }} >
-                Contact information
-              </h1>
-              <p style={{ lineHeight: '1.5rem' }} >
-                Booking and text... this cna be done differently of better ?
-              </p>
-              <Divider />
-          </div>
+        <div key={2} style={styles.section} >
+          <h1 style={{ marginTop: 0 }} >
+            Contact information
+            </h1>
+          <p style={{ lineHeight: '1.5rem' }} >
+            Booking and text... this cna be done differently of better ?
+            </p>
+          <Divider />
         </div>
       </div>
-    )
-  }
-}
+    </div>
+  )
+};
 
 export default Radium(Contact);

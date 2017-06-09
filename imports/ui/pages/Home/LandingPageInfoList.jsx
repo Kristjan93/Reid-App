@@ -10,6 +10,7 @@ import LandingPageInfoListItem from './LandingPageInfoListItem.jsx';
 
 const styles = {
   root: {
+    margin: '26px 0',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
@@ -34,7 +35,6 @@ const LandingPageInfoList = (props) => {
         text={text}
         avatar={<Info />}
       />
-    
     </div>
   );
 };

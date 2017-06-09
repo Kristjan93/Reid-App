@@ -13,14 +13,6 @@ const BookingCard = (props) => {
       <CardText style={{ fontSize: '1rem' }} >
           General information booking by email, phone and question etc...
       </CardText>
-
-      <CardActions>
-          <RaisedButton
-          containerElement={<Link to={null}/>}
-          label="Book Tour"
-          fullWidth={true}
-          primary={true} />
-      </CardActions>
     </Card>
   );
 };

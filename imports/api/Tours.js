@@ -36,7 +36,7 @@ let tours = [
         text: 'Up to 8 riders',
         nestedText: ''  
       },
-      included:   { 
+      included: { 
         type: 'included', 
         title: 'Included', 
         text: 'Riding helmets and if needed rainwear.', 
