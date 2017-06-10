@@ -14,16 +14,14 @@ const styles = {
   },
 };
 
-class CompanyLogoImage extends React.Component {
-  render() {
-    return (
-      <img
-        src={COMPANY_LOGO}
-        alt="Company Logo: Name and a horse picture"
-        style={ [styles.base, this.props.style] } 
-      />
-    );
-  }
+const CompanyLogoImage = (props) => {
+  return (
+    <img
+      src={COMPANY_LOGO}
+      alt="Company Logo: Name and a horse picture"
+      style={ [styles.base, props.style] }
+    />
+  );
 }
 
 export default  Radium(CompanyLogoImage);

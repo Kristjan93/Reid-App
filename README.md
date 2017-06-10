@@ -2,10 +2,11 @@
 
 ## Table of Contents
 
-  1. [Basic Rules](#basic-rules)
-  1. [Bla](#bla)
+1. [Coding Rules](#coding-rules)
+  1. [Import statements group order](#import-statements-group-order)
+2. [Bla](#bla)
 
-## Basic Rules
+## Coding Rules
 ### Import statements group order.
   1. External library's or utilities.
   2. Material-ui components.
@@ -55,6 +56,6 @@
 
 
   - Try to keep file structure flow natural and logical.
-    - While project is small high level components have only one directory containing all sublevel child components. 
+    - High level components have only one directory containing all sublevel child components.
     - Do to some idiomatic tendencies of developers of establishing the 'right way' for file structure there is no definite way of doing it.  Unlike Angular.
 ## Bla

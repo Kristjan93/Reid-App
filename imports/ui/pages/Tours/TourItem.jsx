@@ -18,7 +18,8 @@ const styles = {
   }
 };
 
-const TourItem = ({ id, title, price, imageSrc ,imageWidth ,text ,style, duration, departures }) => {
+const TourItem = ({ 
+  id, title, price, imageSrc ,imageWidth ,text ,style, duration, departures }) => {
   return (
     <div style={ [styles.TourItem, style] } >
       <Card>

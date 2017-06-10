@@ -37,44 +37,42 @@ styles = {
   },
 };
 
-class About extends React.Component {
-  render() {
-    return (
-      <div style={ styles.root } >
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          margin: '0',
-          padding: '0',
-          //border: '1px solid #e0e0e0',
-        }}>
-          <div key={1} style={ styles.imageSection } >
-            <Card>
-              <CardMedia>
-                <img src={HOUR_1} />
-              </CardMedia>
-            </Card>
-          </div>
+const About = (props) => {
+  return (
+    <div style={ styles.root } >
+      <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        margin: '0',
+        padding: '0',
+        //border: '1px solid #e0e0e0',
+      }}>
+        <div key={1} style={ styles.imageSection } >
+          <Card>
+            <CardMedia>
+              <img src={HOUR_1} />
+            </CardMedia>
+          </Card>
+        </div>
 
-          <div key={2} style={ styles.section } >
-              <h1 style={{ marginTop: 0 }} >
-                About us
-              </h1>
-              <p style={{ lineHeight: '1.5rem' }} >
-                {text}
-              </p>
-              <Divider />
+        <div key={2} style={ styles.section } >
             <h1 style={{ marginTop: 0 }} >
-                Some other Title
-              </h1>
-              <p style={{ lineHeight: '1.5rem' }} >
-                {text}
-              </p>
-          </div>
+              About us
+            </h1>
+            <p style={{ lineHeight: '1.5rem' }} >
+              {text}
+            </p>
+            <Divider />
+          <h1 style={{ marginTop: 0 }} >
+              Some other Title
+            </h1>
+            <p style={{ lineHeight: '1.5rem' }} >
+              {text}
+            </p>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 let text = 'We welcome you to our farm Myrkholt, located in in the southwest part of Iceland, about 1 hour drive from Reykjavík. Our farm is well located between Gullfoss and Geysir two of Icelandic´s most beautiful natural wonders. Geysir horses is a small family run business. Our horses are a part of the family and we put a great effort into ensuring they are both happy and healthy.';

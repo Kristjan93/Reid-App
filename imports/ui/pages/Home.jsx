@@ -23,22 +23,20 @@ const styles = {
   },
 };
 
-class Home extends React.Component {
-  render() {
-    return (
-      <div style={ styles.root }>
-        <Carousel />
+const Home = (props) => {
+  return (
+    <div style={ styles.root }>
+      <Carousel />
 
-        <IntroTextBlock />
+      <IntroTextBlock />
 
-        <LandingPageInfoList />
+      <LandingPageInfoList />
 
-        <div style={ styles.mapContainer } className='my-google-map'>
-          <GoogleMap />
-        </div>
+      <div style={ styles.mapContainer } className='my-google-map'>
+        <GoogleMap />
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Radium(Home);
