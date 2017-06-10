@@ -3,10 +3,11 @@
 ## Table of Contents
 
 1. [Coding Rules](#coding-rules)
-  1. [Import statements group order](#import-statements-group-order)
+    1. [Import statements group order](#import-statements-group-order)
 2. [Bla](#bla)
 
 ## Coding Rules
+
 ### Import statements group order.
   1. External library's or utilities.
   2. Material-ui components.
