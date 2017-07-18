@@ -31,7 +31,8 @@
   import HeaderNavMenu from './Header/HeaderNavMenu.jsx';
   ```
 
-### Only use Class components when state must be maintained and stateless otherwise.
+### Class and stateless components.
+Only use Class components when state must be maintained and stateless otherwise.
   ```jsx
   // Good.
   class HelloWorld extends Component {
